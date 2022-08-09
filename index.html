@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./app/dist/css/style.min.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card__background">
+          <div class="card__bg">
+            <picture>
+              <source
+                srcset="./images/bg-main-desktop.png"
+                media="(min-width: 800px)"
+                sizes="100"
+              />
+              <img src="./images/bg-main-mobile.png" alt="bg" />
+            </picture>
+          </div>
+          <div class="card__front">
+            <div class="card__frontbg">
+              <img src="./images/bg-card-front.png" alt="bg" />
+              <div class="card__details">
+                <div class="card__logo">
+                  <img src="./images/card-logo.svg" alt="logo" />
+                </div>
+                <div class="card__number">
+                  <span></span>
+                </div>
+                <div class="card__bott">
+                  <div class="card__holder">
+                    <span></span>
+                  </div>
+                  <div class="card__date">
+                    <span class="month"></span>
+                    <span class="year"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card__back">
+            <div class="card__backbg">
+              <img src="./images/bg-card-back.png" alt="bg" />
+              <div class="card__cvv">
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form">
+        <form class="form__card" id="formcard">
+          <label for="holder" class="form__label">
+            <span class="form__label--title">Cardholder Name</span>
+            <input
+              type="text"
+              name="holder"
+              id="holder"
+              placeholder="e.g. Jane Appleseed"
+              class="form__input"
+              value=""
+              autocomplete="off"
+            />
+            <span class="validate" id="valholder"></span>
+          </label>
+          <label for="number" class="form__label">
+            <span class="form__label--title">Card Number</span>
+            <input
+              type="text"
+              name="number"
+              id="number"
+              placeholder="e.g. 1234 5678 9123"
+              class="form__input"
+              value=""
+              maxlength="19"
+            />
+            <span class="validate" id="valnum"></span>
+          </label>
+          <div class="form__bott">
+            <label for="date" class="form__label form__label--date"
+              ><span class="form__label--title">Exp. Date (mm/yy)</span>
+              <input
+                type="text"
+                name="date"
+                id="month"
+                placeholder="MM"
+                class="form__input"
+                maxlength="2"
+              />
+              <input
+                type="text"
+                name="year"
+                id="year"
+                placeholder="YY"
+                class="form__input"
+                maxlength="2"
+              />
+              <span id="valdate"></span>
+            </label>
+            <label for="cvc" class="form__label"
+              ><span class="form__label--title">CVC</span>
+              <input
+                type="text"
+                name="cvc"
+                id="cvc"
+                placeholder="e.g. 123"
+                class="form__input"
+                maxlength="3"
+              />
+              <span class="validate" id="valcvv">lallala</span>
+            </label>
+          </div>
+          <button class="form__button">Confirm</button>
+        </form>
+        <div class="form__complete" id="complete">
+          <div class="form__checkmark">
+            <img src="./images/icon-complete.svg" alt="icon" />
+          </div>
+          <span class="form__thankyou">thank you!</span>
+          <span class="form___descthank">we've added your card details</span>
+          <button class="form__button">continue</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./app/js/index.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+      integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>

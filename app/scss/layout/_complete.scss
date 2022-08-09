@@ -1,0 +1,24 @@
+@use "../util/" as u;
+
+.form {
+  &__complete {
+    margin-right: 12rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 23.4375rem;
+    // border: 1px solid red;
+  }
+
+  &__thankyou {
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+
+  &___descthank {
+    text-transform: capitalize;
+    color: u.$n-dark-grayish-violet;
+  }
+}

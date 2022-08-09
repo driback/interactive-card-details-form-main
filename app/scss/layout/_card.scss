@@ -1,0 +1,79 @@
+@use "../util/" as u;
+
+.card {
+  &__background {
+    width: fit-content;
+    height: max-content;
+    position: relative;
+  }
+
+  &__front,
+  &__back {
+    position: absolute;
+    width: 280px;
+    height: fit-content;
+  }
+
+  &__front {
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    transform: translate(1rem, 2.5rem);
+  }
+
+  &__back {
+    right: 0;
+    top: 0;
+    z-index: 1;
+    transform: translate(-1rem, 2.5rem);
+  }
+
+  &__details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: u.$n-white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__cvv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: u.$n-white;
+    // border: 1px solid red;
+    display: grid;
+    place-items: center end;
+    font-size: 0.65rem;
+
+    > span {
+      margin-right: 12%;
+      margin-bottom: 1%;
+    }
+  }
+
+  &__logo {
+    width: 48px;
+  }
+
+  &__number {
+    width: 100%;
+    margin-top: auto;
+    letter-spacing: 2px;
+  }
+
+  &__bott {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,18 @@
+@use "../util/" as u;
+
+.card {
+  @include u.breakpoint(desktop) {
+    &__front,
+    &__back {
+      width: auto;
+    }
+
+    &__front {
+      transform: translate(30%, 75%);
+    }
+
+    &__back {
+      transform: translate(50%, -75%);
+    }
+  }
+}
